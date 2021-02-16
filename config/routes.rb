@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   get '/tasks:id/edit', to: "tasks#edit", as: :edit
     # post information into db
   patch '/tasks:id', to: "tasks#update"
+   # # destroy a restaurant
+   delete '/tasks:id', to: "tasks#destroy"
 end
