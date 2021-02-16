@@ -1,0 +1,17 @@
+<h1>All my Tasks</h1>
+<ul>
+  <% @tasks.each do |task| %>
+  <li>
+    <div class="d-flex">
+      <% if task.completed %>
+        <i class="fas fa-check-square"></i>
+        <% else %>
+        <i class="fas fa-ban"></i>
+        <% end %>
+        <h5 class="mx-3"><%= task.title %> <h5>
+      </div>
+    <p><%= task.details %> </p>
+    <%= link_to "See more", task_path(task) %>
+  </li>
+  <% end %>
+</ul>
