@@ -1,4 +1,5 @@
 <h1>All my Tasks</h1>
+<%= link_to " Create a new task", new_task_path %>
 <ul>
   <% @tasks.each do |task| %>
   <li>
@@ -11,7 +12,8 @@
         <h5 class="mx-3"><%= task.title %> <h5>
       </div>
     <p><%= task.details %> </p>
-    <%= link_to "See more", task_path(task) %>
+    <%= link_to "See more", task_path(task) %> <br>
+    <%= link_to "Edit Task", edit_path(task) %>
   </li>
   <% end %>
 </ul>
